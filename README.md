@@ -115,6 +115,25 @@ footer {
     padding: 20px;
 }
 </style>
+
+<script>function searchBusiness() {
+
+    let search = document.getElementById("search").value.toLowerCase();
+
+    let businesses = document.getElementsByClassName("business-card");
+
+    for (let i = 0; i < businesses.length; i++) {
+
+        let name = businesses[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+
+        if (name.includes(search)) {
+            businesses[i].style.display = "block";
+        }
+        else {
+            businesses[i].style.display = "none";
+        }
+    }
+}</script>
     <header>
         <h1>Women Entrepreneurs</h1>
         <p>Discover and Support Local Women Businesses</p>
