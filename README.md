@@ -1,2 +1,224 @@
 # Local-Women-Entrepreneurship-Directory
 Small women-led businesses may have limited visibility in local markets and online directories.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Women Entrepreneurship Directory</title>
+
+</head>
+
+<body>
+
+ <style>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f5f7;
+}
+
+header {
+    background-color: #873c68;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+nav {
+    background-color: #54213f;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+}
+
+section {
+    padding: 30px;
+    text-align: center;
+}
+
+.welcome {
+    background-color: #f1dce8;
+    padding: 60px 20px;
+}
+
+.btn {
+    background-color: #873c68;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+input, select, textarea {
+    display: block;
+    width: 80%;
+    padding: 12px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.business-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.business-card {
+    background-color: white;
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.business-card h3 {
+    color: #873c68;
+}
+
+.verified {
+    color: green;
+    font-weight: bold;
+}
+
+form {
+    background-color: white;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+button {
+    background-color: #873c68;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #54213f;
+}
+
+footer {
+    background-color: #54213f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+    <header>
+        <h1>Women Entrepreneurs</h1>
+        <p>Discover and Support Local Women Businesses</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#business">Businesses</a>
+        <a href="#register">Register Business</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home" class="welcome">
+        <h2>Support Local Women Entrepreneurs</h2>
+        <p>Find local women-led businesses, products and services.</p>
+        <a href="#business" class="btn">Explore Businesses</a>
+    </section>
+
+    <section id="business">
+        <h2>Our Business Directory</h2>
+
+        <input type="text" id="search"
+        placeholder="Search business name..."
+        onkeyup="searchBusiness()">
+
+        <div class="business-container" id="businessList">
+
+            <div class="business-card">
+                <h3>Fashion House</h3>
+                <p>Category: Clothing</p>
+                <p>Location: Phagwara</p>
+                <p>Products: Dresses and suits</p>
+                <p>Contact: 9876543210</p>
+                <span class="verified">Demo Verified</span>
+            </div>
+
+            <div class="business-card">
+                <h3>Sweet Kitchen</h3>
+                <p>Category: Food</p>
+                <p>Location: Jalandhar</p>
+                <p>Products: Cakes and sweets</p>
+                <p>Contact: 9876543211</p>
+                <span class="verified">Demo Verified</span>
+            </div>
+
+            <div class="business-card">
+                <h3>Beauty Studio</h3>
+                <p>Category: Beauty</p>
+                <p>Location: Ludhiana</p>
+                <p>Services: Makeup and skincare</p>
+                <p>Contact: 9876543212</p>
+                <span class="verified">Demo Verified</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="register">
+        <h2>Register Your Business</h2>
+
+        <form onsubmit="registerBusiness(event)">
+
+            <label>Business Name:</label>
+            <input type="text" id="businessName" required>
+
+            <label>Owner Name:</label>
+            <input type="text" id="ownerName" required>
+
+            <label>Category:</label>
+            <select id="category" required>
+                <option value="">Select Category</option>
+                <option>Clothing</option>
+                <option>Food</option>
+                <option>Beauty</option>
+                <option>Handicrafts</option>
+                <option>Education</option>
+            </select>
+
+            <label>Location:</label>
+            <input type="text" id="location" required>
+
+            <label>Contact Number:</label>
+            <input type="tel" id="phone" required>
+
+            <label>Products or Services:</label>
+            <textarea id="products" required></textarea>
+
+            <button type="submit">Submit Business</button>
+
+        </form>
+
+        <p id="message"></p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: womenbusiness@example.com</p>
+        <p>Project: Local Women Entrepreneurship Directory</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Women Entrepreneurship Directory</p>
+        <p>Supporting Women, Supporting Businesses.</p>
+    </footer>
+
+</body>
+</html>
